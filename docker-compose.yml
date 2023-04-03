@@ -3,6 +3,8 @@ services:
     image: mongo
     container_name: ${SLUG}-db
     restart: always
+    ports:
+      - 27017:27017
     environment:
       MONGO_INITDB_ROOT_USERNAME: ${ROOT_DB_USER}
       MONGO_INITDB_ROOT_PASSWORD: ${ROOT_DB_PASS}
